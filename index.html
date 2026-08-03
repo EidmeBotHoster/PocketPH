@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
-     * {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -8352,11 +8352,27 @@ function calculateSmartScale() {
 
 
 function drawGrid() {
-    ctx.strokeStyle = VERTICAL_GRID_COLOR; 
-    ctx.lineWidth = 1;
-    
-    ctx.textAlign = "center";
-    ctx.textBaseline = "alphabetic";
+    // Obtain or create the persistent HTML overlay container for the grid
+    let gridContainer = document.getElementById('html-grid-container');
+    if (!gridContainer) {
+        const chartWrapper = document.querySelector('.trading_chart') || canvas.parentElement;
+        gridContainer = document.createElement('div');
+        gridContainer.id = 'html-grid-container';
+        gridContainer.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        `;
+        chartWrapper.appendChild(gridContainer);
+    }
+
+    // Clear previous DOM grid elements
+    gridContainer.innerHTML = '';
 
     const step = BODY_WIDTH * 1.2;
     const totalLines = Math.ceil(canvas.width / step);
@@ -8371,50 +8387,39 @@ function drawGrid() {
 
     if (visibleCandlesCount >= 60) {
         labelInterval = 12;
+    } else if (visibleCandlesCount >= 25) {
+        labelInterval = 6;
     }
-    else if (visibleCandlesCount >= 25) {
-         labelInterval = 6;
-    }
- 
-    // --- HTML OVERLAY SETUP (Preserves crisp vector text) ---
-    let labelsContainer = document.getElementById('gridTimeLabelsContainer');
-    if (!labelsContainer) {
-        const chartWrapper = document.querySelector('.trading_chart') || canvas.parentElement;
-        labelsContainer = document.createElement('div');
-        labelsContainer.id = 'gridTimeLabelsContainer';
-        labelsContainer.style.cssText = `
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 12;
-            overflow: hidden;
-        `;
-        chartWrapper.appendChild(labelsContainer);
-    }
-    labelsContainer.innerHTML = '';
+
+    const fragment = document.createDocumentFragment();
 
     for (let i = 0; i <= totalLines; i++) {
         const index = Math.floor(scrollOffset / step) + i;
-        const x = Math.round(i * step - offset) + 0.5;
+        const x = Math.round(i * step - offset);
 
         if (index % labelInterval !== 0) continue;
 
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-        
+        // Render Vertical Grid Line as HTML element
+        const line = document.createElement('div');
+        line.style.cssText = `
+            position: absolute;
+            left: ${x}px;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: ${VERTICAL_GRID_COLOR};
+            transform: translateX(-50%);
+        `;
+        fragment.appendChild(line);
+
         if (i === 0) continue;
-        
+
         const totalSeconds = index * CANDLE_TIME;
         let hh = startHour;
         let mm = startMinute;
         let ss = startSecond + totalSeconds;
 
-        
+        mm += Math.floor(ss / 60);
         ss = ss % 60;
         hh += Math.floor(mm / 60);
         mm = mm % 60;
@@ -8425,23 +8430,26 @@ function drawGrid() {
             label += ":" + String(ss).padStart(2, "0");
         }
 
-        // --- CANVAS FILLTEXT REMOVED & REPLACED WITH SHARP HTML TEXT ---
-        const labelEl = document.createElement('span');
+        // Render Crisp Text Label as HTML element
+        const labelEl = document.createElement('div');
         labelEl.style.cssText = `
             position: absolute;
             left: ${x}px;
-            bottom: 61px;
+            bottom: 62px;
             transform: translateX(-50%);
-            color:#939696 ;
+            color: #99a1a1;
             font-family: 'Noto Sans', sans-serif;
-            font-size: 12px;
             font-weight: 100;
+            font-size: 12px;
             white-space: nowrap;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         `;
         labelEl.textContent = label;
-        labelsContainer.appendChild(labelEl);
+        fragment.appendChild(labelEl);
     }
+
+    gridContainer.appendChild(fragment);
 }
 
 
@@ -9213,8 +9221,8 @@ function updateChartHeaderTime() {
     const currentChartTotalSeconds = (formingIndex * CANDLE_TIME) + (lineAnimProgress * CANDLE_TIME);
     
     let hh = startH;
-    let mm = Math.floor(currentChartTotalSeconds / 60);
-    let ss = Math.floor(currentChartTotalSeconds % 60);
+    let mm = Math.floor((currentChartTotalSeconds -0.7) / 60);
+    let ss = Math.floor((currentChartTotalSeconds -0.7) % 60);
     
     hh += Math.floor(mm / 60);
     mm = mm % 60;
