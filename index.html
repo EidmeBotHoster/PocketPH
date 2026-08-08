@@ -449,7 +449,16 @@ html, body {
     -webkit-user-select: none !important;
     user-select: none !important;
     -webkit-touch-callout: none !important;
+
+    background-image: url('https://imgur.com/23dDffs.jpg') !important;
+    background-size: 450% 130% !important; 
+    background-repeat: no-repeat !important;
+    background-position: 58% -23.5% !important;
+    
 }
+
+
+
 
 /* Allow touch gestures on chart */
 .trading_chart, #chartCanvas {
@@ -1297,10 +1306,9 @@ html, body {
             -ms-user-select: none; /* IE/Edge */
             flex:1; 
             min-width: 0;
-            background:#111; 
+            background:transparent;
             position:relative; 
             overflow: hidden; 
-            background-image: url('https://imgur.com/23dDffs.jpg');
             background-size: 280% 100%;
             background-repeat: no-repeat;
             background-position: 55% 0%;
@@ -8290,7 +8298,7 @@ let currentYScale = 1.0;
 let visibleCenterPrice = 0.0; 
 const DEFAULT_SCALE = 1.0;     
 
-const BASE_MONETARY_PRICE = 0.80750; //rightvalue
+const BASE_MONETARY_PRICE = 0.71750; //rightvalue
 const PRICE_DISPLAY_PRECISION = 5;
 const MONETARY_TICK_INTERVAL = 0.0005; 
 const MONETARY_CONVERSION_RATIO = 0.00001; 
@@ -11826,193 +11834,91 @@ z"/>
       </div>
 
       <!-- SECOND SVG OVERLAY CONTAINER -->
-      <div class="svg-overlay-container" id="svg-overlay-container-2">
-     
+      <div class="svg-overlay-container" id="svg-overlay-container-2"     
 
 
+  style="
+    background-image: url('https://imgur.com/23dDffs.jpg') !important;
+    background-size: 450% 130% !important;
+    background-repeat: no-repeat !important;
+    background-position: 58% -23.5% !important;
+  ">
 
 
-
-  <svg 
-  xmlns="http://www.w3.org/2000/svg" 
-  viewBox="0 0 1080 2340" 
-  width="100%" 
-  height="100%" 
-  preserveAspectRatio="none"
-  style="display: block; width: 100%; height: 100%; overflow: hidden;"
->
-  <defs>
-    <!-- Moving Shimmer Gradient -->
-    <linearGradient id="shimmer" x1="-100%" y1="0%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#272936" stop-opacity="0.1" />
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#272936" stop-opacity="0.1" />
-      <animateTransform 
-        attributeName="gradientTransform" 
-        type="translate" 
-        from="-1080,0" 
-        to="2160,0" 
-        dur="1.8s" 
-        repeatCount="indefinite" />
-    </linearGradient>
-
-    <!-- Fade Pulse Style -->
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 64 64" style="white-space: pre;" fill="#cbd5e1">
     <style>
-      .pulse {
-        animation: pulseFade 1.6s ease-in-out infinite;
-      }
-      @keyframes pulseFade {
-        0%, 100% { opacity: 0.6; }
-        50% { opacity: 1; }
-      }
+@keyframes a21460_t { 0% { transform: translate(55.5px,20.5px) scale(1,0.6) translate(-0.5px,-14px); } 84.2105% { transform: translate(55.5px,20.5px) scale(1,0.6) translate(-0.5px,-14px); } 100% { transform: translate(55.5px,18px) scale(1,1) translate(-0.5px,-14px); } }
+@keyframes a21460_o { 0% { opacity: 0; } 84.2105% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes a21461_t { 0% { transform: translate(56px,29.5px) scale(1,0.052619) translate(-5px,-19.5px); } 73.6842% { transform: translate(56px,29.5px) scale(1,0.052619) translate(-5px,-19.5px); } 89.4736% { transform: translate(56px,29.5px) scale(1,1) translate(-5px,-19.5px); } 100% { transform: translate(56px,29.5px) scale(1,1) translate(-5px,-19.5px); } }
+@keyframes a21461_o { 0% { opacity: 0; } 73.6842% { opacity: 0; } 89.4737% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21462_t { 0% { transform: translate(39.5px,20.5px) scale(1,0.5) translate(-0.5px,-5px); } 68.421% { transform: translate(39.5px,20.5px) scale(1,0.5) translate(-0.5px,-5px); } 84.2105% { transform: translate(39.5px,18px) scale(1,1) translate(-0.5px,-5px); } 100% { transform: translate(39.5px,18px) scale(1,1) translate(-0.5px,-5px); } }
+@keyframes a21462_o { 0% { opacity: 0; } 68.4211% { opacity: 0; } 84.2105% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21463_t { 0% { transform: translate(40px,38px) scale(1,0.054423) translate(-5px,-21px); } 57.8947% { transform: translate(40px,38px) scale(1,0.054423) translate(-5px,-21px); } 73.6842% { transform: translate(40px,38px) scale(1,1) translate(-5px,-21px); } 100% { transform: translate(40px,38px) scale(1,1) translate(-5px,-21px); } }
+@keyframes a21463_o { 0% { opacity: 0; } 57.8947% { opacity: 0; } 73.6842% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21464_t { 0% { transform: translate(23.5px,20.5px) scale(1,0.4) translate(-0.5px,9px); } 47.3684% { transform: translate(23.5px,20.5px) scale(1,0.4) translate(-0.5px,9px); } 63.1578% { transform: translate(23.5px,18px) scale(1,1) translate(-0.5px,9px); } 100% { transform: translate(23.5px,18px) scale(1,1) translate(-0.5px,9px); } }
+@keyframes a21464_o { 0% { opacity: 0; } 47.3684% { opacity: 0; } 63.1579% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21465_t { 0% { transform: translate(24px,47px) scale(1,0.082881) translate(-5px,-16px); } 31.5789% { transform: translate(24px,47px) scale(1,0.082881) translate(-5px,-16px); } 47.3684% { transform: translate(24px,47px) scale(1,1) translate(-5px,-16px); } 100% { transform: translate(24px,47px) scale(1,1) translate(-5px,-16px); } }
+@keyframes a21465_o { 0% { opacity: 0; } 31.5789% { opacity: 0; } 47.3684% { opacity: 1; } 84.2105% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21466_t { 0% { transform: translate(7.5px,25.5px) scale(1,0.7) translate(-0.5px,-14px); } 21.0526% { transform: translate(7.5px,25.5px) scale(1,0.7) translate(-0.5px,-14px); } 36.8421% { transform: translate(7.5px,18px) scale(1,1) translate(-0.5px,-14px); } 100% { transform: translate(7.5px,18px) scale(1,1) translate(-0.5px,-14px); } }
+@keyframes a21466_o { 0% { opacity: 0; } 21.0526% { opacity: 0; } 36.8421% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21467_t { 0% { transform: translate(8px,17px) scale(1,0.058969) translateX(-5px); } 5.2631% { transform: translate(8px,17px) scale(1,0.058969) translateX(-5px); } 21.0526% { transform: translate(8px,17px) scale(1,1) translateX(-5px); } 100% { transform: translate(8px,17px) scale(1,1) translateX(-5px); } }
+@keyframes a21467_o { 0% { opacity: 0; } 5.2632% { opacity: 0; } 21.0526% { opacity: 1; } 100% { opacity: 1; } }
     </style>
-
-    <!-- Mask Covering ALL Light Animated Containers -->
-    <mask id="ui-mask">
-      <!-- Top header blocks -->
-      <rect x="25" y="20" width="350" height="70" fill="white" />
-      <rect x="390" y="20" width="120" height="70" fill="white" />
-      <rect x="890" y="20" width="165" height="70" fill="white" />
-      
-      <!-- Main view box container -->
-      <rect x="25" y="150" width="1030" height="1610" fill="white" />
-      
-      <!-- Middle text placeholder blocks -->
-      <rect x="25" y="1795" width="370" height="75" fill="white" />
-      <rect x="25" y="1920" width="1030" height="145" fill="white" />
-      <rect x="408" y="2095" width="265" height="45" fill="white" />
-
-      <!-- Bottom bar and action dots -->
-      <rect x="25" y="2170" width="1030" height="45" fill="white" />
-      <circle cx="75" cy="2270" r="28" fill="white" />
-      <circle cx="310" cy="2270" r="28" fill="white" />
-      <circle cx="540" cy="2270" r="28" fill="white" />
-      <circle cx="770" cy="2270" r="28" fill="white" />
-      <circle cx="1005" cy="2270" r="28" fill="white" />
-    </mask>
-  </defs>
-
-  <!-- Dark Base Background -->
-  <rect width="1080" height="2340" fill="#181922"/>
-
-  <!-- Animated Light Elements -->
-  <g class="pulse">
-    <!-- Top Bar Light Blocks -->
-    <rect x="25" y="20" width="350" height="70" fill="#252735"/>
-    <rect x="390" y="20" width="120" height="70" fill="#252735"/>
-    <rect x="890" y="20" width="165" height="70" fill="#252735"/>
-
-    <!-- Main Viewport Light Container -->
-    <rect x="25" y="150" width="1030" height="1610" fill="#252735"/>
-
-    <!-- Middle Text Blocks -->
-    <rect x="25" y="1795" width="370" height="75" fill="#252735"/>
-    <rect x="25" y="1920" width="1030" height="145" fill="#252735"/>
-    <rect x="408" y="2095" width="265" height="45" fill="#252735"/>
-
-    <!-- Bottom Line and Navigation Dots -->
-    <rect x="25" y="2170" width="1030" height="45" fill="#252735"/>
-    <ellipse cx="75" cy="2270" rx="22" ry="28" fill="#252735"/>
-    <ellipse cx="310" cy="2270" rx="22" ry="28" fill="#252735"/>
-    <ellipse cx="540" cy="2270" rx="22" ry="28" fill="#252735"/>
-    <ellipse cx="770" cy="2270" rx="22" ry="28" fill="#252735"/>
-    <ellipse cx="1005" cy="2270" rx="22" ry="28" fill="#252735"/>
-  </g>
-
-  <!-- Shimmer Overlay applied across ALL light shapes -->
-  <rect width="1080" height="2340" fill="url(#shimmer)" mask="url(#ui-mask)" />
+    <rect width="2" height="37" fill="#0099fa" stroke="none" opacity="0" transform="translate(55.5,20.5) scale(1,0.6) translate(-0.5,-14)" style="animation: 1.9s linear infinite both a21460_t, 1.9s linear infinite both a21460_o;"></rect>
+    <rect width="10" height="19.5" fill="#0099fa" stroke="none" rx="1" opacity="0" transform="translate(56,29.5) scale(1,0.0526194) translate(-5,-19.5)" style="animation: 1.9s linear infinite both a21461_t, 1.9s linear infinite both a21461_o;"></rect>
+    <rect width="2" height="42" fill="#0099fa" stroke="none" opacity="0" transform="translate(39.5,20.5) scale(1,0.5) translate(-0.5,-5)" style="animation: 1.9s linear infinite both a21462_t, 1.9s linear infinite both a21462_o;"></rect>
+    <rect width="10" height="21" fill="#0099fa" stroke="none" rx="1" opacity="0" transform="translate(40,38) scale(1,0.0544235) translate(-5,-21)" style="animation: 1.9s linear infinite both a21463_t, 1.9s linear infinite both a21463_o;"></rect>
+    <rect width="2" height="28" fill="#0099fa" stroke="none" opacity="0" transform="translate(23.5,20.5) scale(1,0.4) translate(-0.5,9)" style="animation: 1.9s linear infinite both a21464_t, 1.9s linear infinite both a21464_o;"></rect>
+    <rect width="10" height="16" fill="#0099fa" stroke="none" rx="1" opacity="0" transform="translate(24,47) scale(1,0.0828809) translate(-5,-16)" style="animation: 1.9s linear infinite both a21465_t, 1.9s linear infinite both a21465_o;"></rect>
+    <rect width="2" height="40" fill="#0099fa" stroke="none" opacity="0" transform="translate(7.5,25.5) scale(1,0.7) translate(-0.5,-14)" style="animation: 1.9s linear infinite both a21466_t, 1.9s linear infinite both a21466_o;"></rect>
+    <rect width="10" height="23" fill="#0099fa" stroke="none" rx="1" opacity="0" transform="translate(8,17) scale(1,0.0589689) translate(-5,0)" style="animation: 1.9s linear infinite both a21467_t, 1.9s linear infinite both a21467_o;"></rect>
 </svg>
-
-
-
-
-
-
-
-
-
-
       </div>
 
       <!-- THIRD SVG OVERLAY CONTAINER -->
-      <div class="svg-overlay-container" id="svg-overlay-container-3" style="position:absolute; top:-90px;">
-        
+      <div class="svg-overlay-container" id="svg-overlay-container-3"
+
+      style="
+    background-image: url('https://imgur.com/23dDffs.jpg') !important;
+    background-size: 450% 130% !important;
+    background-repeat: no-repeat !important;
+    background-position: 58% -23.5% !important;
+   clip-path: inset(0px 0px 75px 0px);
+  ">
 
 
-
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 120 120">
-
-    <!-- White Circle Background -->
-    <circle cx="60" cy="60" r="42" fill="white"/>
-
-    <!-- Rotating Blue Border -->
-    <g>
-        <animateTransform
-            attributeName="transform"
-            type="rotate"
-            from="360 60 60"
-            to="0 60 60"
-            dur="1.5s"
-            repeatCount="indefinite"/>
-
-        <circle
-            cx="60"
-            cy="60"
-            r="42"
-            fill="none"
-            stroke="#2196F3"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-dasharray="40 600"/>
-    </g>
-
-    <!-- Animated Centered Icon -->
-    <g transform="translate(47.5, 47.5) scale(0.045)">
-        <defs>
-            <mask id="sweep-mask">
-                <rect x="0" y="0" width="569" height="594" fill="white" class="mask-anim" />
-            </mask>
-        </defs>
-
-        <style>
-            .mask-anim {
-                /* Explicitly centered X (284.5px) and grounded Y (594px) */
-                transform-origin: 284.5px 594px;
-                animation: growFromBottom 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-            }
-
-            @keyframes growFromBottom {
-                0% {
-                    transform: scaleY(0);
-                    opacity: 0;
-                }
-                20% {
-                    opacity: 1;
-                }
-                65% {
-                    transform: scaleY(1);
-                    opacity: 1;
-                }
-                85% {
-                    transform: scaleY(1);
-                    opacity: 1;
-                }
-                100% {
-                    transform: scaleY(1);
-                    opacity: 0;
-                }
-            }
-        </style>
-
-        <path mask="url(#sweep-mask)" fill="#0a6607" d="M221 552 51 455l-6-4c-11-3-12-11-12-21V157q0-5 5-8l111-65 4-2v48q1 3-3 6l-70 40q-2 2-3 5l2 239 28 16h2V241h44v217q0 4 4 7l29 16V186h44v315q-1 6 5 8l27 16V71l-76 44V67q0-4 3-6l92-53q4-2 8 0l92 53 3 4v50l-76-44v454l31-17 1-6 1-185-1-125v-6h44v295l31-18q3-1 2-5V241h44v196l4-2 24-14q4-3 4-7V182q0-4-4-7l-72-43V82l22 13 95 54q3 2 3 7v284q0 4-4 7L298 582c-13 7-13 7-26 0z"/>
-    </g>
-
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 64 64" style="white-space: pre;" fill="#cbd5e1">
+    <style>
+@keyframes a21460_t { 0% { transform: translate(55.5px,20.5px) scale(1,0.6) translate(-0.5px,-14px); } 84.2105% { transform: translate(55.5px,20.5px) scale(1,0.6) translate(-0.5px,-14px); } 100% { transform: translate(55.5px,18px) scale(1,1) translate(-0.5px,-14px); } }
+@keyframes a21460_o { 0% { opacity: 0; } 84.2105% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes a21461_t { 0% { transform: translate(56px,29.5px) scale(1,0.052619) translate(-5px,-19.5px); } 73.6842% { transform: translate(56px,29.5px) scale(1,0.052619) translate(-5px,-19.5px); } 89.4736% { transform: translate(56px,29.5px) scale(1,1) translate(-5px,-19.5px); } 100% { transform: translate(56px,29.5px) scale(1,1) translate(-5px,-19.5px); } }
+@keyframes a21461_o { 0% { opacity: 0; } 73.6842% { opacity: 0; } 89.4737% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21462_t { 0% { transform: translate(39.5px,20.5px) scale(1,0.5) translate(-0.5px,-5px); } 68.421% { transform: translate(39.5px,20.5px) scale(1,0.5) translate(-0.5px,-5px); } 84.2105% { transform: translate(39.5px,18px) scale(1,1) translate(-0.5px,-5px); } 100% { transform: translate(39.5px,18px) scale(1,1) translate(-0.5px,-5px); } }
+@keyframes a21462_o { 0% { opacity: 0; } 68.4211% { opacity: 0; } 84.2105% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21463_t { 0% { transform: translate(40px,38px) scale(1,0.054423) translate(-5px,-21px); } 57.8947% { transform: translate(40px,38px) scale(1,0.054423) translate(-5px,-21px); } 73.6842% { transform: translate(40px,38px) scale(1,1) translate(-5px,-21px); } 100% { transform: translate(40px,38px) scale(1,1) translate(-5px,-21px); } }
+@keyframes a21463_o { 0% { opacity: 0; } 57.8947% { opacity: 0; } 73.6842% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21464_t { 0% { transform: translate(23.5px,20.5px) scale(1,0.4) translate(-0.5px,9px); } 47.3684% { transform: translate(23.5px,20.5px) scale(1,0.4) translate(-0.5px,9px); } 63.1578% { transform: translate(23.5px,18px) scale(1,1) translate(-0.5px,9px); } 100% { transform: translate(23.5px,18px) scale(1,1) translate(-0.5px,9px); } }
+@keyframes a21464_o { 0% { opacity: 0; } 47.3684% { opacity: 0; } 63.1579% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21465_t { 0% { transform: translate(24px,47px) scale(1,0.082881) translate(-5px,-16px); } 31.5789% { transform: translate(24px,47px) scale(1,0.082881) translate(-5px,-16px); } 47.3684% { transform: translate(24px,47px) scale(1,1) translate(-5px,-16px); } 100% { transform: translate(24px,47px) scale(1,1) translate(-5px,-16px); } }
+@keyframes a21465_o { 0% { opacity: 0; } 31.5789% { opacity: 0; } 47.3684% { opacity: 1; } 84.2105% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21466_t { 0% { transform: translate(7.5px,25.5px) scale(1,0.7) translate(-0.5px,-14px); } 21.0526% { transform: translate(7.5px,25.5px) scale(1,0.7) translate(-0.5px,-14px); } 36.8421% { transform: translate(7.5px,18px) scale(1,1) translate(-0.5px,-14px); } 100% { transform: translate(7.5px,18px) scale(1,1) translate(-0.5px,-14px); } }
+@keyframes a21466_o { 0% { opacity: 0; } 21.0526% { opacity: 0; } 36.8421% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes a21467_t { 0% { transform: translate(8px,17px) scale(1,0.058969) translateX(-5px); } 5.2631% { transform: translate(8px,17px) scale(1,0.058969) translateX(-5px); } 21.0526% { transform: translate(8px,17px) scale(1,1) translateX(-5px); } 100% { transform: translate(8px,17px) scale(1,1) translateX(-5px); } }
+@keyframes a21467_o { 0% { opacity: 0; } 5.2632% { opacity: 0; } 21.0526% { opacity: 1; } 100% { opacity: 1; } }
+    </style>
+    <rect width="2" height="37" fill="#0099fa" stroke="none" opacity="0" transform="translate(55.5,20.5) scale(1,0.6) translate(-0.5,-14)" style="animation: 1.9s linear infinite both a21460_t, 1.9s linear infinite both a21460_o;"></rect>
+    <rect width="10" height="19.5" fill="#0099fa" stroke="none" rx="1" opacity="0" transform="translate(56,29.5) scale(1,0.0526194) translate(-5,-19.5)" style="animation: 1.9s linear infinite both a21461_t, 1.9s linear infinite both a21461_o;"></rect>
+    <rect width="2" height="42" fill="#0099fa" stroke="none" opacity="0" transform="translate(39.5,20.5) scale(1,0.5) translate(-0.5,-5)" style="animation: 1.9s linear infinite both a21462_t, 1.9s linear infinite both a21462_o;"></rect>
+    <rect width="10" height="21" fill="#0099fa" stroke="none" rx="1" opacity="0" transform="translate(40,38) scale(1,0.0544235) translate(-5,-21)" style="animation: 1.9s linear infinite both a21463_t, 1.9s linear infinite both a21463_o;"></rect>
+    <rect width="2" height="28" fill="#0099fa" stroke="none" opacity="0" transform="translate(23.5,20.5) scale(1,0.4) translate(-0.5,9)" style="animation: 1.9s linear infinite both a21464_t, 1.9s linear infinite both a21464_o;"></rect>
+    <rect width="10" height="16" fill="#0099fa" stroke="none" rx="1" opacity="0" transform="translate(24,47) scale(1,0.0828809) translate(-5,-16)" style="animation: 1.9s linear infinite both a21465_t, 1.9s linear infinite both a21465_o;"></rect>
+    <rect width="2" height="40" fill="#0099fa" stroke="none" opacity="0" transform="translate(7.5,25.5) scale(1,0.7) translate(-0.5,-14)" style="animation: 1.9s linear infinite both a21466_t, 1.9s linear infinite both a21466_o;"></rect>
+    <rect width="10" height="23" fill="#0099fa" stroke="none" rx="1" opacity="0" transform="translate(8,17) scale(1,0.0589689) translate(-5,0)" style="animation: 1.9s linear infinite both a21467_t, 1.9s linear infinite both a21467_o;"></rect>
 </svg>
 
 
-
-
       </div>
+
 
       <!-- FOURTH SVG OVERLAY CONTAINER -->
       <div class="svg-overlay-container" id="svg-overlay-container-4">
@@ -12164,7 +12070,7 @@ z"/>
         }
       }
 
-      function triggerProgressBarAnimation() {
+    function triggerProgressBarAnimation() {
   progressBar.style.transition = 'none';
   progressBar.style.width = '0%';
   progressBar.style.opacity = '1';
@@ -12196,25 +12102,38 @@ z"/>
         svgOverlay1.classList.add('active');
 
         // First SVG random duration
-        const duration1 = Math.floor(Math.random() * 20) + 60;
+        const duration1 = Math.floor(Math.random() * 30) + 60;
         
         setTimeout(() => {
           svgOverlay1.classList.remove('active');
 
           if (svgOverlay2) {
+            // Force 0s initial transition & full opacity
+            svgOverlay2.style.setProperty('transition', 'none', 'important');
+            svgOverlay2.style.setProperty('opacity', '1', 'important');
             svgOverlay2.classList.add('active');
 
             // Second SVG random duration
-            const duration2 = Math.floor(Math.random() * 800) + 1500;
+            const duration2 = Math.floor(Math.random() * 200) + 400;
 
             setTimeout(() => {
-              svgOverlay2.classList.remove('active');
+              // FORCE 100ms fade-out with !important (overrides stylesheet)
+              svgOverlay2.style.setProperty('transition', 'opacity 100ms linear', 'important');
+              svgOverlay2.style.setProperty('opacity', '0', 'important');
 
+              // Clean up 2nd SVG after exact 100ms
+              setTimeout(() => {
+                svgOverlay2.classList.remove('active');
+                svgOverlay2.style.removeProperty('transition');
+                svgOverlay2.style.removeProperty('opacity');
+              }, 100);
+
+              // 2. IMMEDIATELY start SVG 3
               if (svgOverlay3) {
                 svgOverlay3.classList.add('active');
 
                 // Third SVG random duration
-                const duration3 = Math.floor(Math.random() * 60) + 120;
+                const duration3 = Math.floor(Math.random() * 500) + 800;
 
                 setTimeout(() => {
                   svgOverlay3.classList.remove('active');
