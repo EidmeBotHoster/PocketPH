@@ -1885,7 +1885,7 @@ display:"";
             display: flex;
             align-items: center;
             justify-content: center; 
-            position:relative; right:32px; bottom:3px;
+            position:relative; right:32px; bottom:0px;
             font-size:17px; 
                     
         }
@@ -1910,8 +1910,8 @@ display:"";
         }
         #time-popup { 
              position:absolute;
-             right:-10px;
-             bottom:30px;
+             right:-120px;
+             bottom:70px;
              
         }
         
@@ -2185,7 +2185,7 @@ display:"";
 
 .svg-percen{
 position:relative;
-top:-3px;
+top:-1px;
 right:1px;
 }
 
@@ -2738,7 +2738,6 @@ right:1px;
             position: absolute;
             top: 60px;
             left: 20px;
-            height: 480px; 
             background-color: #2a3040;
             border-radius: 8px;
             z-index: 150;
@@ -2872,7 +2871,7 @@ right:1px;
         .asset-list-item {
             display: grid;
             grid-template-columns: 1fr 65px;
-            padding:6px 0px;
+            padding:10px 10px;
             font-size: 14px;
             cursor: pointer;
             border-radius: 4px;
@@ -6040,7 +6039,7 @@ z"/>
             
             <!-- Symbol Selector -->
             <button class="btn btn-symbol" id="symbolButton">
-                <span class="symbol-text">AUD/CAD OTC</span>
+                <span class="symbol-text">AUD/USD OTC</span>
                <i class="fa-solid fa-caret-down" style="right:4px; bottom: 1px;color:white; font-size:11.5px;"></i>
 
                 <!-- Currency Hover Popover -->
@@ -6444,7 +6443,11 @@ M310.820068,204.000000
 	C309.053131,163.598373 310.679321,170.364548 310.768982,177.507294 
 	C310.877686,186.170395 310.811768,194.835663 310.820068,204.000000 
 z"/>
-</svg></div>
+</svg>
+<style>
+.svg-timmer{ position:relative; bottom:1px;}
+</style>
+</div>
                         </div>
                         <div class="popup-panel" id="time-popup">
                             <div class="popup-adjuster time-adjuster-layout">
@@ -7650,7 +7653,7 @@ function updateTradeCountBadge() {
         // --- NEW PANEL LOGIC ---
         function initTradingPanel() {
             const timePopup = document.getElementById('time-popup');
-            let currentH = 0, currentM = 0, currentS =3 ;
+            let currentH = 0, currentM = 0, currentS =5 ;
             
 
 
@@ -7680,7 +7683,7 @@ function checkPresetMatch() {
 
 
             // State for Amount
-            let currentTradeAmount = 1; // Always stores the actual dollar value
+            let currentTradeAmount = [10, 15, 20, 25, 30][Math.floor(Math.random() * 5)]; // Always stores the actual dollar value
             let isPercentageMode = false;
             const MAX_GLOBAL_LIMIT = 20000;
 
@@ -10839,37 +10842,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Request 3: Included Payouts as a number
             const CURRENCY_PAIRS = [
-                { pair: 'AUD/CAD OTC', payout: 92},
-                { pair: 'AUD/NZD OTC', payout: 92 },
-                { pair: 'EUR/GBP OTC', payout: 92,selected: true },
-                { pair: 'EUR/CHF OTC', payout: 92 },
-                { pair: 'EUR/GBP OTC', payout: 92 },
-                { pair: 'EUR/USD OTC', payout: 92 },
-                { pair: 'GBP/AUD OTC', payout: 92 },
-                { pair: 'GBP/JPY OTC', payout: 92 },
-                { pair: 'KES/USD OTC', payout: 92 },
-                { pair: 'LBP/USD OTC', payout: 92 },
-                { pair: 'OMR/CNY OTC', payout: 92 },
-                { pair: 'QAR/CNY OTC', payout: 92 },
-                { pair: 'USD/BRL OTC', payout: 92 },
-                { pair: 'USD/CHF OTC', payout: 92 },
-                { pair: 'USD/CNH OTC', payout: 92 },
-                { pair: 'USD/COP OTC', payout: 92 },
-                { pair: 'USD/DZD OTC', payout: 92 },
-                { pair: 'USD/EGP OTC', payout: 92 },
-                { pair: 'USD/INR OTC', payout: 92 },
-                { pair: 'USD/PKR OTC', payout: 92 },
-                { pair: 'USD/THB OTC', payout: 92 },
-                { pair: 'NZD/USD OTC', payout: 88 },
-                { pair: 'ZAR/USD OTC', payout: 88 },
-                { pair: 'MAD/USD OTC', payout: 87 },
-                { pair: 'NZD/JPY OTC', payout: 83 },
-                { pair: 'USD/MYR OTC', payout: 83 },
-                { pair: 'USD/SGD OTC', payout: 83 },
-                { pair: 'CAD/JPY OTC', payout: 82 },
-                { pair: 'YER/USD OTC', payout: 82 },
-                { pair: 'EUR/HUF OTC', payout: 80 },
-                { pair: 'USD/MXN OTC', payout: 80 },
+                { pair: 'AUD/USD OTC', payout: 92,selected: true}, //selectedcurrency
+                
             ];
             
             // Set initial payout and pair text
